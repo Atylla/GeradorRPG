@@ -1,3 +1,4 @@
+import { btnGerador } from "../geradores/gerador.js";
 
 
 // functions
@@ -17,8 +18,22 @@ export const carregarPagina = async (pagina) => {
         const html = await res.text();
 
         container.innerHTML = html;
+
+        switchPages(pagina);
         
     } catch (err) {
         console.error(`Erro ao carregar página "${pagina}":`, err)
     }
+}
+
+const switchPages = (pagina) => {
+    switch (pagina) {
+        case 'npc':
+            paginaNpc(pagina);
+            break;
+    }
+}
+
+const paginaNpc = () => {
+    btnGerador();
 }

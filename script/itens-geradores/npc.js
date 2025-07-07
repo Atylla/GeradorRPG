@@ -8,5 +8,10 @@ export const npcData = {
         'taverneiro',
         'relojueiro',
         'alpinista'
+    ],
+    humor: [
+        'legal',
+        'feliz',
+        'raiva'
     ]
 }
