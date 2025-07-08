@@ -13,5 +13,9 @@ export const npcData = {
         'legal',
         'feliz',
         'raiva'
+    ],
+    sorvas: [
+        'coco',
+        'arroz'
     ]
 }

@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    border: 1px solid #000;
+    margin: 15px;
+    height: 80px;
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    flex: 1;
+    border: 1px solid #000;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    align-items: center;
+    border-radius: 8px;
+}
+
+section h1 {
+  margin-top: 10px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+section button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.box--gerador {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.box--gerador div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box--gerador p:first-child {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.box--gerador p:last-child {
+  flex: 1;
+  text-align: right;
+}
+
+footer {
+    border: 1px solid #000;
+    margin: 15px;
+    margin-top: auto;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
