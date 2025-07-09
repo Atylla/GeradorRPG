@@ -65,7 +65,7 @@ button[data-tipo]:hover {
     width: 100%;
     max-width: 500px;
     background: #fff9f5;
-    padding: 20px;
+    padding: 5px 20px 20px 20px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
