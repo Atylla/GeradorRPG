@@ -1,7 +1,9 @@
 import { npcData } from "../itens-geradores/npc.js"
+import { tavernaData } from "../itens-geradores/taverna.js";
 
-const dadosGerador = {
+export const dadosGerador = {
     npc: npcData,
+    taverna: tavernaData
 }
 
 export const btnGerador = () => {
@@ -38,6 +40,12 @@ export const gerador = (dataObj) => {
         if(dataObj[chave]){
             const valor = dataObj[chave][Math.floor(Math.random() * dataObj[chave].length)];
             el.textContent = valor;
+
+            el.classList.remove('anima-preenchimento');
+
+            void el.offsetWidth;
+
+            el.classList.add('anima-preenchimento');
         }
     });
 };

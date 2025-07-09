@@ -1,4 +1,4 @@
-import { btnGerador } from "../geradores/gerador.js";
+import { btnGerador, gerador, dadosGerador } from "../geradores/gerador.js";
 
 
 // functions
@@ -28,12 +28,56 @@ export const carregarPagina = async (pagina) => {
 
 const switchPages = (pagina) => {
     switch (pagina) {
+        case 'home':
+            paginaHome(pagina);
+            break;
         case 'npc':
             paginaNpc(pagina);
             break;
+        case 'taverna':
+            paginaTaverna(pagina);
+            break;
+        case 'cidade':
+            paginaCidade(pagina);
+            break;
+        case 'reinos':
+            paginaReinos(pagina);
+            break;
+        case 'enc-aleatorios':
+            paginaEncAleatorios(pagina);
+            break;
     }
 }
-
-const paginaNpc = () => {
+const paginaHome = (pag) => {
+    botaoAtivo(pag);
+}
+const paginaNpc = (pag) => {
     btnGerador();
+    botaoAtivo(pag);
+    setTimeout(() => {
+        gerador(dadosGerador['npc']);
+    },100)
+}
+const paginaTaverna = (pag) => {
+    btnGerador();
+    botaoAtivo(pag);
+}
+const paginaCidade = (pag) => {
+    btnGerador();
+    botaoAtivo(pag);
+}
+const paginaReinos = (pag) => {
+    btnGerador();
+    botaoAtivo(pag);
+}
+const paginaEncAleatorios = (pag) => {
+    btnGerador();
+    botaoAtivo(pag);
+}
+
+const botaoAtivo = (pagina) => {
+    document.querySelectorAll('nav button[data-page]').forEach(btn => {
+        const page = btn.getAttribute('data-page');
+        btn.classList.toggle('button-select', page === pagina);
+    });
 }

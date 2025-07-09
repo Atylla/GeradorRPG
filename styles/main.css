@@ -8,7 +8,8 @@
 html,
 body {
     height: 100%;
-    overflow: hidden;
+    min-height: 100vh;
+    box-sizing: border-box;
     background-color: #fffaef;
 }
 
@@ -21,10 +22,12 @@ header {
     margin: 15px;
     height: 80px;
     border-radius: 8px;
+    flex-shrink: 0;
 
     display: flex;
     align-items: center;
     justify-content: center;
+    
 
     background-color: #ffffff;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -32,14 +35,35 @@ header {
 
 header button {
     background-color: #ffa256;
-    border: 1px solid #ffcca2;
+    border: 1px solid #ffa155;
     padding: 5px;
     border-radius: 5px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     cursor: pointer;
+    transition: all 0.3s ease;
+}
+@keyframes inflando {
+    0% {
+        padding: 5px;
+    }
+    60% {
+        padding: 14px;
+    }
+    100% {
+        padding: 11px;
+    }
 }
 header button:hover {
-    background-color: #ffad6a;
+    background-color: #ffc697;
+    border: 1px solid #ffa155;
+    font-size: 16px;
+    animation: inflando 0.4s ease forwards; 
+}
+.button-select {
+    background-color: #ffd6b4;
+    border: 1px solid #ffc291;
+    font-size: 14px;
+    padding: 10px;
 }
 
 section {
@@ -64,7 +88,24 @@ footer {
     align-items: center;
     justify-content: center;
     border-radius: 8px;
-
+    flex-shrink: 0;
     background-color: #ffffff;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+@keyframes preenchimento {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.anima-preenchimento {
+    animation: preenchimento 0.4s ease;
+    font-style: italic;
+    color: #5a4031;
 }
