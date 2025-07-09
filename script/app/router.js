@@ -1,4 +1,4 @@
-import { btnGerador, gerador, dadosGerador } from "../geradores/gerador.js";
+import { btnGerador, gerador, dadosGerador, copiarGerador, miniGerador } from "../geradores/gerador.js";
 
 
 // functions
@@ -55,12 +55,29 @@ const paginaNpc = (pag) => {
     btnGerador();
     botaoAtivo(pag);
     setTimeout(() => {
+        const btnCopiar = document.querySelector('#btn-copiar');
+
+        if (btnCopiar) {
+            btnCopiar.addEventListener('click', () => copiarGerador('npc'));
+        }
+
+        miniGerador('npc')
         gerador(dadosGerador['npc']);
-    },100)
+    }, 100)
 }
 const paginaTaverna = (pag) => {
     btnGerador();
     botaoAtivo(pag);
+    setTimeout(() => {
+        const btnCopiar = document.querySelector('#btn-copiar');
+
+        if (btnCopiar) {
+            btnCopiar.addEventListener('click', () => copiarGerador('taverna'));
+        }
+
+        miniGerador('taverna');
+        gerador(dadosGerador['taverna']);
+    }, 100)
 }
 const paginaCidade = (pag) => {
     btnGerador();
