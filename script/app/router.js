@@ -82,6 +82,16 @@ const paginaTaverna = (pag) => {
 const paginaCidade = (pag) => {
     btnGerador();
     botaoAtivo(pag);
+    setTimeout(() => {
+        const btnCopiar = document.querySelector('#btn-copiar');
+
+        if (btnCopiar) {
+            btnCopiar.addEventListener('click', () => copiarGerador('cidade'));
+        }
+
+        miniGerador('cidade');
+        gerador(dadosGerador['cidade']);
+    }, 100)
 }
 const paginaReinos = (pag) => {
     btnGerador();

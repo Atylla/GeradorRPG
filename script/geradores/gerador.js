@@ -1,9 +1,11 @@
+import { cidade } from "../itens-geradores/cidade.js";
 import { npcData } from "../itens-geradores/npc.js"
 import { tavernaData } from "../itens-geradores/taverna.js";
 
 export const dadosGerador = {
     npc: npcData,
-    taverna: tavernaData
+    taverna: tavernaData,
+    cidade: cidade
 }
 
 export const btnGerador = () => {
