@@ -1,4 +1,5 @@
 import { cidade } from "../itens-geradores/cidade.js";
+import { enc_aleatorio } from "../itens-geradores/enc-aleatorios.js";
 import { npcData } from "../itens-geradores/npc.js"
 import { reinoData } from "../itens-geradores/reinos.js";
 import { tavernaData } from "../itens-geradores/taverna.js";
@@ -7,7 +8,8 @@ export const dadosGerador = {
     npc: npcData,
     taverna: tavernaData,
     cidade: cidade,
-    reinos: reinoData
+    reinos: reinoData,
+    enc: enc_aleatorio
 }
 
 export const btnGerador = () => {

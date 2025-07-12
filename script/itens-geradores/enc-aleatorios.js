@@ -31,7 +31,7 @@ export const enc_aleatorio = {
         "Mercadores condenados a vagar eternamente vendendo itens amaldiçoados em busca de redenção.",
         "Uma entidade que se alimenta de gritos perdidos ecoa pelos túneis abaixo da terra, chamando por quem ousa escutar."
     ],
-    interação: [
+    interacao: [
         "Oferece sabedoria em troca de memórias; rejeição causa confusão mental.",
         "Dançar garante visões do passado; recusar prende a alma temporariamente.",
         "Entrega dons artísticos com preço oculto: a própria voz do personagem.",

@@ -110,6 +110,16 @@ const paginaReinos = (pag) => {
 const paginaEncAleatorios = (pag) => {
     btnGerador();
     botaoAtivo(pag);
+    setTimeout(() => {
+        const btnCopiar = document.querySelector('#btn-copiar');
+
+        if (btnCopiar) {
+            btnCopiar.addEventListener('click', () => copiarGerador('enc'));
+        }
+
+        miniGerador('enc')
+        gerador(dadosGerador['enc']);
+    }, 100)
 }
 
 const botaoAtivo = (pagina) => {
