@@ -96,6 +96,16 @@ const paginaCidade = (pag) => {
 const paginaReinos = (pag) => {
     btnGerador();
     botaoAtivo(pag);
+    setTimeout(() => {
+        const btnCopiar = document.querySelector('#btn-copiar');
+
+        if (btnCopiar) {
+            btnCopiar.addEventListener('click', () => copiarGerador('reinos'));
+        }
+
+        miniGerador('reinos')
+        gerador(dadosGerador['reinos']);
+    }, 100)
 }
 const paginaEncAleatorios = (pag) => {
     btnGerador();
